@@ -45,12 +45,12 @@ I send PUT Request to the Url
         Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().put("/{first}/{second}");
         response.prettyPrint();
         // 4. Do Assertion
-        HashMap actualData = response.as(HashMap.class);
+        Map<String,Object> actualData = response.as(HashMap.class);
         System.out.println("actualData="+actualData);
 
         assertEquals(expectedData.get("completed"),actualData.get("completed"));
         assertEquals(expectedData.get("title"),actualData.get("title"));
-        assertEquals(expectedData.get("title"),actualData.get("title"));
+        assertEquals(expectedData.get("userId"),actualData.get("userId"));
 
     }
 }

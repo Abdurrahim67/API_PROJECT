@@ -4,10 +4,9 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonPlaceHolderPojo {
-
     private Integer userId;
-    private String title;
-    private Boolean completed;
+    private String  title;
+    private Boolean  completed;
 
     public JsonPlaceHolderPojo(Integer userId, String title, Boolean completed) {
         this.userId = userId;
@@ -50,4 +49,5 @@ public class JsonPlaceHolderPojo {
                 ", completed=" + completed +
                 '}';
     }
+
 }

@@ -6,23 +6,24 @@ import java.io.IOException;
 
 public class ObjectMapperUtils {
 
-    //new ObjectMapper().readValue(jsonInString,HaspMap.class);
+    //new ObjectMapper().readValue(jsonInString, HashMap .class);
+
     private static ObjectMapper mapper;
 
     static {
         mapper = new ObjectMapper();
-
     }
 
-    public static <T> T convertJsonToJava(String json, Class<T> cls) {
+    public static <T> T convertJsonToJava(String json, Class<T> cls){//Generic Method
 
         T javaResult = null;
 
         try {
-            mapper.readValue(json, cls);
+            javaResult = mapper.readValue(json,cls);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         return javaResult;
     }
 }

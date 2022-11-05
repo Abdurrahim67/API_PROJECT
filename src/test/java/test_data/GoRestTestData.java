@@ -11,6 +11,8 @@ public class GoRestTestData {
         dataKeyMap.put("email",email);
         dataKeyMap.put("gender",gender);
         dataKeyMap.put("status",status);
+
+
         return dataKeyMap;
     }
     public Map<String,Object> expectedDataMethod(Object meta,Map<String ,String> data){

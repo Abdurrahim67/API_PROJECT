@@ -42,7 +42,7 @@ public class Get06 extends RestfulBaseUrl {
 
         //1. Set The URL (URL Olustur)
         spec.pathParams("first", "booking", "second", 2325);
-        //2.Set The Exoected Data (put,post,patch)
+        //2.Set The Expected Data (put,post,patch)
 
         //3.Send The Request And Get The Response(Talep gönder ve cevap al)
         Response response = given().spec(spec).when().get("/{first}/{second}");

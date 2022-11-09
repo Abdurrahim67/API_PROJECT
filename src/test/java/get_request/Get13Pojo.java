@@ -47,7 +47,7 @@ public class Get13Pojo extends GoRestBaseUrl {
         GoRestPojo actualData = response.as(GoRestPojo.class);
         System.out.println("actualData=" + actualData);
 
-        assertEquals(200,response.getStatusCode());
+        assertEquals(200, response.getStatusCode());
         assertEquals(expectedData.getMeta(), actualData.getMeta());
         assertEquals(goRestDataPojo.getId(), actualData.getData().getId());
         assertEquals(goRestDataPojo.getName(), actualData.getData().getName());

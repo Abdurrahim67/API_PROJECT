@@ -14,15 +14,17 @@ public class ObjectMapperUtils {
         mapper = new ObjectMapper();
     }
 
-    public static <T> T convertJsonToJava(String json, Class<T> cls){//Generic Method
+    public static <T> T convertJsonToJava(String json, Class<T> cls) {//Generic Method
 
         T javaResult = null;
 
+
         try {
-            javaResult = mapper.readValue(json,cls);
+            javaResult = mapper.readValue(json, cls);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
 
         return javaResult;
     }
